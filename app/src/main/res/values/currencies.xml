@@ -3,10 +3,7 @@
     <string-array name="currency_array">
         <item>USD</item>
         <item>EUR</item>
-        <item>CAD</item>
-        <item>AUD</item>
-        <item>BGN</item>
-        <item>RON</item>
-        <item>PHP</item>
+        <item>CNY</item>
+
     </string-array>
 </resources>
