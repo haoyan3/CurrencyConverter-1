@@ -1,5 +1,7 @@
 package edu.illinois.cs.cs125.currencyconverter;
 
+import android.graphics.drawable.AnimationDrawable;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,6 +28,10 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
+    ConstraintLayout myLayout;
+    AnimationDrawable animationDrawable;
+
+
     private EditText currency;
     private Spinner fromcurr;
     private Spinner tocurr;
@@ -40,6 +46,15 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        myLayout = (ConstraintLayout) findViewById(R.id.myLayout);
+
+        animationDrawable = (AnimationDrawable) myLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(4500);
+        animationDrawable.setExitFadeDuration(4500);
+        animationDrawable.start();
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         requestQueue = Volley.newRequestQueue(this);
